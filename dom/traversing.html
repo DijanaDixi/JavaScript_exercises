@@ -1,0 +1,64 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .active {
+        background-color: chartreuse;
+      }
+      .color {
+        color: coral;
+      }
+      .red {
+        color: crimson;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ol>
+        <li id="kl">Milos</li>
+        <li>Dijan</li>
+        <li>Tedy</li>
+      </ol>
+    </div>
+
+    <div>
+      <ol>
+        <li>bla</li>
+        <li>bla</li>
+        <li id="nesto" class="active">bla</li>
+      </ol>
+    </div>
+    <script>
+      //     function doSomething(){
+      //     var li=document.getElementsByTagName("li")
+      //     for(var i=0; i<li.length;i++){
+      //         if(li[i].getAttribute("class")){
+      //             li[i].removeAttribute("class")
+      //         }else{
+      //             var first=document.getElementsByTagName("li")[0].className="active"
+      //         }
+      //     }
+
+      // }
+      // console.log(doSomething())
+        function changeClass() {
+          var li = document.getElementsByTagName("li");
+          for(var i=0; i<li.length;i++){
+              if(li[i].className==="active"){
+                  li[i].className="red"
+              }else{
+                  var first=document.getElementsByTagName("li")[0].className="active"
+              }
+          }
+        }
+        console.log(changeClass());
+
+      // var txt = document.getElementById("demo").innerHTML;
+      // var pos = txt.replace(/Hello/g, "hi");
+      // document.getElementById("demo").innerHTML = pos;
+    </script>
+  </body>
+</html>

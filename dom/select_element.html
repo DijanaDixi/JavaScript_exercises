@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color{
+            background-color: blue;
+        }
+        .yellow{
+            color: chartreuse;
+        }
+    </style>
+</head>
+
+<body>
+<ul>
+    <li>Dijana</li>
+    <li>Milos</li>
+    <li>Tedy</li>
+</ul>
+
+<ul class="color">
+    <li>Djordjevic</li>
+    <li>Stankovic</li>
+    <li>Dogic</li>
+</ul>
+
+<ul>
+    <li>Djordjevic</li>
+    <li>Stankovic</li>
+    <li>Dogic</li>
+</ul>
+
+
+    <script>
+        var ul=document.getElementsByClassName("color")
+        ul.className="color"
+
+        var li=document.getElementsByTagName("li")
+        // console.log(li)
+        for(var i=0; i<li.length; i++){
+            li[li.length-1].className="yellow"
+        }
+
+    
+    </script>
+</body>
+</html>

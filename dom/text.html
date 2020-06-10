@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <ol>
+      <li id="nesto">dixi</li>
+      <li></li>
+      <li></li>
+    </ol>
+
+    <p>dijana</p>
+    <script>
+      //   function presentAlert() {
+      //       var text=document.getElementById("nesto")
+      //       alert(text.innerText)
+      //   }
+      //   console.log(presentAlert());
+
+      function text(txt) {
+        var list = document.getElementsByTagName("li");
+      
+          var last = list[list.length - 1];
+          last.textContent=txt
+        
+      }
+      console.log(text("something"));
+
+      function replace(){
+        var el=document.querySelector("p").innerHTML;
+        var el=document.querySelector("p").innerHTML="milos"
+      }
+      console.log(replace())
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!-- Write a JavaScript program to set the background color of a paragraph. -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero rem voluptas tenetur voluptatem aliquid sunt earum voluptatum quibusdam, esse nisi,
+         unde neque asperiores quas molestiae aut fugit aliquam consequuntur fuga?</p>
+
+   <script>
+       var paragraf=document.getElementById("paragraf")
+       paragraf.addEventListener("click", changeColor)
+
+       function changeColor(){
+           paragraf.style.background="blue"
+       }
+
+</script>      
+</body>
+</html>
