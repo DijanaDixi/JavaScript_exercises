@@ -1,0 +1,45 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .width {
+        width: 500px;
+      }
+      .border {
+        border: 100px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="http://via.placeholder.com/300x300" alt="slika" />
+      <img src="http://via.placeholder.com/300x300" alt="slika" />
+      <img src="http://via.placeholder.com/300x300" alt="slika" />
+      <img src="http://via.placeholder.com/300x300" alt="slika" />
+      <img src="http://via.placeholder.com/300x300" alt="slika" />
+      <img src="http://via.placeholder.com/300x300" class="width" alt="slika" />
+    </div>
+    <p>dijana</p>
+
+    <!-- Script -->
+    <script>
+      var img = document.querySelectorAll("img");
+
+      for (var i = 0; i < img.length; i++) {
+        img[i].addEventListener("click", function addColor(e) {
+          if (e.target.className !== "width") {
+            e.target.stopPropagation();
+          } else {
+            e.target.className = "border";
+          }
+        });
+      }
+
+      document.addEventListener("click",function (e){
+          alert(e.target.nodeName)
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: turquoise;
+      }
+      button {
+        background-color: crimson;
+        color: white;
+        margin-left: 40%;
+        width: 100px;
+        border-radius: 10px;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+      #turnOff {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <button value="Click" id="turnOn">Click me!</button>
+    <button onclick="remove()" value="Click" id="turnOff">Turn off!</button>
+    <script>
+      // function changeColor() {
+      //  var btn=document.querySelector("button")
+      //  btn.onclick=function(){
+      //    var bdy=document.querySelector("body")
+      //    bdy.style.background="yellow"
+      //  }
+      // }
+      // console.log(changeColor());
+
+      var btn = document.getElementById("turnOn");
+      btn.addEventListener("click", changeColor1);
+
+      function changeColor1() {
+        var bdy = document.querySelector("body");
+        bdy.classList.toggle("yellow");
+      }
+      changeColor1()
+
+      function remove() {
+        document
+          .getElementById("turnOn")
+          .removeEventListener("click", changeColor1);
+      }
+    
+
+    
+    </script>
+  </body>
+</html>

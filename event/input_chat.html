@@ -1,0 +1,48 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #chat {
+        width: 400px;
+        height: 600px;
+        border: 2px solid gray;
+        background-color: grey;
+      }
+      button {
+        background-color: red;
+        color: whitesmoke;
+      }
+      #area {
+        background-color: white;
+        color: teal;
+      }
+      p {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="chat">
+      <input type="text" value="" />
+      <button onclick="insertWord()" value="send">Send</button>
+
+      <div id="area"><!-- paragraf with input --></div>
+    </div>
+
+
+    <script>
+      var div = document.getElementById("area");
+      var button = document.querySelector("button");
+
+      function insertWord() {
+        var input = document.querySelector("input").value;
+        var pasus = document.createElement("p");
+        pasus.innerHTML = input;
+        div.appendChild(pasus);
+      }
+      insertWord();
+    </script>
+  </body>
+</html>
